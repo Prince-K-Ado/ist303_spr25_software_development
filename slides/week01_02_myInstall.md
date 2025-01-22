@@ -6,7 +6,6 @@
 ## This section not formatted as slides 
 - not intended for memorization/review
 - highlight some useful commands
-- matches terminal appearance
 
 ## Windows Path
 - Check Path: `$Env:PATH`
