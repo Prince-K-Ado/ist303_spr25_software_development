@@ -1,14 +1,7 @@
 # Specific asset folders
-addl_rsc/
-rsc_private/
-assignments/
-readings/
-solutions/
-syllabus/
+scripts/
 test_dir/
-textbooks/
-draft/
-projects/
+unpub/
 
 
 # Byte-compiled / optimized / DLL files
