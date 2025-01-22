@@ -17,8 +17,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ---
 ## Course Materials
-- [Syllabus](https://cgu.instructure.com/courses/X/assignments/syllabus)
-- [Readings](https://cgu.instructure.com/courses/X/pages/resources-and-materials)
+- [Syllabus](https://cgu.instructure.com/courses/14195/assignments/syllabus)
+- [Readings](https://cgu.instructure.com/courses/14195/pages/resources-and-materials)
 ---
 ### General programming/dev resources (extra-curricular)
   - [Hacker news](https://news.ycombinator.com/)
