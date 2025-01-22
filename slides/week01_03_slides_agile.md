@@ -30,8 +30,8 @@ More specifically, Agile programming methods
 ---
 # What is Agile?
 - Set of guiding principles
-- Response to predominant software development methods and processes at the time
-- "Waterfall" development
+- Response to predominant software development methods and processes at the time - "Waterfall" development
+- Waterfall development:
   - Highly specified documents from the start
   - Planning and Implementation were sequential stages
   - Failures: projects not meeting needs, developer burnout
@@ -147,7 +147,7 @@ Applied design lessons from what field(s)?
 - emergent processes centered around learning
 - constant questioning through cycles of formulation, implementation and reflection
 - dynamic worldview: uniqueness, ambiguity, complexity and change
-- new/oud summarized on pg 82 (next slide)
+- new/old summarized on pg 82 (next slide)
 
 ---
 pg 82
@@ -187,6 +187,7 @@ Sometimes will be explicitly called out and obvious, others more implicit or ref
 ---
 ### How to use the subway map
 - **Do not attempt to memorize them all!** 
+
 - Document and notate as you come across them (you'll increasingly see connections between them)
 - Track/star/highlight those you have used and find useful
 - Use for ideas/inspiration during your team project - experiment!

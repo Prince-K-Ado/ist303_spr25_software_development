@@ -38,7 +38,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Blending the practical and academic
 - Tool fluency: provide a solid foundation across a number of tools (proficiency is up to you)
 - Study of agile development process
-- Get comfortable to jumping between:
+- Get comfortable jumping between:
   - tools and theory
   - small details to broad topics, *strengthening the connections between them each time*
 ---
@@ -50,8 +50,8 @@ Eventually it will be smooth sailing:
 ### These files
 - plain text files
 - appearance added using the [markdown format](https://markdownguide.org/cheat-sheet/)
-- slide formatting done via marp extension
-- all lecture materials will be [available on github](https://github.com/damapak/ist303_spr2025) at https://github.com/damapak/ist303_spr2025
+- slide formatting done via marp extension for vs code
+- all lecture materials will be [available on github](https://github.com/damapak/ist303_spr25) at https://github.com/damapak/ist303_spr25
 
 ---
 # Introduction to Python and the command line: overview
@@ -78,13 +78,15 @@ Python 3 installed by default.
   ![Python install](rsc/wk1_inst.png)
 
 ---
-## Why 3.7?
+## Why Python 3.7?
   - virtual environment manager installed by default (venv, 3.4+)
   - f strings (3.6+)
   - pytest (3.7+)
 
 
 ## Go ahead and install now (if needed) 
+
+[aquarium timer](https://timer.onlineclock.net/bg/aquarium/)
 
 ---
 ## Installing a code editor: text editor or IDE?
@@ -104,6 +106,6 @@ Python 3 installed by default.
 - Do not need to do now (cover git more next week)
 
 ---
-### [IDE Exploration](week01_02_myInstall.md)
+### [The Terminal and Virtual Environments](week01_02_myInstall.md)
 
 

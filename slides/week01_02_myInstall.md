@@ -5,8 +5,8 @@
 
 ## This section not formatted as slides 
 - not intended for memorization/review
-- run through some common commands
-- matches appearance of terminal
+- highlight some useful commands
+- matches terminal appearance
 
 ## Windows Path
 - Check Path: `$Env:PATH`
