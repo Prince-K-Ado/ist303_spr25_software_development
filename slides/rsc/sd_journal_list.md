@@ -20,4 +20,4 @@
 - IEEE Transactions on Neural Networks and Learning Systems
 - Proceedings of the IEEE
 
-[back to agile slides](/week01_03_slide_agile.md)
+[back to agile slides](../week01_03_slides_agile.md)

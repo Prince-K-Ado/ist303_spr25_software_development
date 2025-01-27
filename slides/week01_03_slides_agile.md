@@ -129,7 +129,7 @@ A "wicked problem" is one where:
 - the problem does not have a static solution and changes over time
 - multiple conflicting viewpoints are present (no easily identified desirable outcomes to optimize)
 
-Authors present software development
+Authors present software development as a wicked problem
 
 Applied design lessons from what field(s)?
 
