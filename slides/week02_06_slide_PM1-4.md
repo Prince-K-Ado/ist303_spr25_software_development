@@ -522,3 +522,9 @@ Revise your remaining work estimates after estimating tasks
 - talk to them about implications
 
 These unplanned tasks must estimated, added to the big board and tracked like any other - they will add work to your burn-down.
+
+---
+# Due Next Week
+- Team project part A
+- Git and Github exercise
+- Pair Programming Exercise #1
