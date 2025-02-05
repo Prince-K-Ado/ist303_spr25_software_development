@@ -40,7 +40,7 @@ The python interpreter is an interactive coding session, where anything you ente
 
 **Use the interpreter to learn about python and to test out smaller code snippets.**
 
-- Start the interpreter using the `python` command from your terminal
+- Start the interpreter using the `python` / `python3` command from your terminal
 - Exit back to terminal with `quit()`
 ---
 
