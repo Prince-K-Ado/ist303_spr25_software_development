@@ -203,10 +203,10 @@ Similar to an index, but rather than a single item it accesses multiple items by
 ---
 one of the following results in an error; can you guess which?
 ```
-"park"[0]
-"park"[4]
-"park"[1:]
-"park"[:3]
+"park"[0]    # option 1
+"park"[4]    # option 2
+"park"[1:]   # option 3
+"park"[:3]   # option 4
 ```
 
 ---
