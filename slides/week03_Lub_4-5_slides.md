@@ -7,7 +7,17 @@ paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
+## In the News
+- Github use as forensic tool in tracking government website changes [link](https://www.404media.co/forbidden-words-github-reveals-how-software-engineers-are-purging-federal-databases/])
 
+- AI systems with 'unacceptable risk' banned in EU [link](https://techcrunch.com/2025/02/02/ai-systems-with-unacceptable-risk-are-now-banned-in-the-eu/)
+  - 4 risk categories: minimal, limited, high, unacceptable
+- DeepSeek R1
+  - inaccurate when it comes to news [link](https://www.newsguardrealitycheck.com/p/deepseek-ai-chatbot-china-russia-iran-disinformation)
+  - bypassing its filters using [hex](https://www.geeksforgeeks.org/hexadecimal-number-system/) encoding [link](https://substack.com/home/post/p-156004330)
+  - AI utility dependent on use case
+
+---
 # Week 3: Python
 Most of the class (Lubanovic Chs 4-8)
 - General Python info
@@ -23,8 +33,10 @@ Most of the class (Lubanovic Chs 4-8)
 Python structures code with indentation (not brackets)
 - recommend using spaces, not tabs (different text editors store tab chars differently)
 
+Python uses 0-based (zero-based) indexing (first item in a collection has index position 0)
+
 ---
-### Statement syntax
+### Python Statement Syntax
 Statements/conditions end in `:`
 ```
 if 1 == 2:
@@ -38,7 +50,7 @@ if (1==2) {
 ```
 
 ---
-### Comments
+### Python Comments
 comment with `#` (hash/pound)
 - `# This is a comment`
 - will not be executed by the python interpreter
@@ -50,7 +62,6 @@ line")
 ```
 
 ---
-
 ## Lubanovic Chapter 4: If
 
 ### `If` statement
@@ -117,7 +128,7 @@ aka logical operators. Combine conditions using these operators for more complex
 ---
 _What do the following statements evaluate to?_
 ```
-4 == 4 or 2 > 7
+4 == 4 or 2 > 7  #(is left side True? Is right side True?)
 4 == "4"
 True or False
 True is False
@@ -141,8 +152,8 @@ try:
 ```
 a=[1,2,3]
 b=[1,2,3]
-a == b #equality of value
-a is b #reference the same object?
+a == b  # equality of value
+a is b  # reference the same object?
 
 a=[5,6,7]
 b=a
@@ -160,7 +171,7 @@ The following evaluate to **False**:
 
 
 **All other values evaluate to True**
-_this is extremely helpful for evaluating statements such as `if` or `while`_
+_this is extremely helpful for evaluating statements that include `if`, `while`, or `for`_
 
 ---
 # Chapter 5: Strings
@@ -176,9 +187,18 @@ _this is extremely helpful for evaluating statements such as `if` or `while`_
 ### String indexing and slicing
 In Python, brackets `[]` are used to access elements of _subscriptable_ objects. 
 
-A ___subscriptable___ object is composed of smaller, independently accessible items/objects. Strings are composed of characters, lists are composed of elements, etc. Integers are not composed of any smaller objects. 
+A ___subscriptable___ object is composed of smaller, independently accessible items/objects. 
+- Strings are composed of characters, 
+- lists are composed of elements 
+- Integers are not composed of any smaller objects 
 
-The format uses square brackets: `object[]`, this is the same for both **indexing** and **slicing**. Indexing is used if a single value is passed in, slicing utilizes `:` within the brackets.
+---
+### String indexing and slicing, cont'd
+The format uses square brackets: `object[]`
+
+This is the same for both **indexing** and **slicing**
+
+Indexing is used if a single value is passed in, slicing utilizes `:` within the brackets.
 
 ---
 ### Indexing
@@ -210,10 +230,10 @@ one of the following results in an error; can you guess which?
 ```
 
 ---
-### Advanced slicing
+### Advanced slicing: Steps
 Slicing also supports a third parameter, called _step_. The step parameter specifies which items to return as it traverses the object; a step of 2 returns _every other_ character.
 
-#### `mystring[start:end:step]`
+#### `mystring [start : end : step]`
 - start and end same as slicing (start and end index position)
 - **step**: the number of index places to move; default is 1, 2 would be every other character
  
@@ -230,7 +250,7 @@ _Note "until you reach" the defined endpoint, not AFTER you pass the endpoint_
 
 ---
 #### Advanced slicing examples to try
-What do you think the following will return?
+Guess what the following will return, then type them in python to check.
 - `len('hahaha')`
 - `'hahaha'[1:5:2]`
 - `'hahaha'[1::2]`  (no endpoint defined)
@@ -266,6 +286,10 @@ The variable _mystring_ now points to the newly created object that was made by 
 
 This is the most common way of "changing" immutable object types in Python.
 
+---
+```
+mystring = "poodle"
+```
 _can you think of a way to replace the first instance of 'p' with 'd' using indexing?_
 
 ---
@@ -285,11 +309,13 @@ Methods are accessed via the format:
 
 ---
 ### String methods
-String methods take a string object and perform actions on that string based on arguments passed to it in `( )`
+String methods take a string object and perform actions on that string based on arguments passed in using parentheses `( )`
 
 The replace method from before is an example: 
 
-`mystring.replace('p', 'd')` where `mystring` is the name of your string object, `'p'` and `'d'` are function arguments - the characters you want to replace and what to replace it with, respectively.
+`mystring.replace('p', 'd')` where `mystring` is the name of your string object, `'p'` and `'d'` are function **arguments**. 
+
+In this case the arguments represent the characters you want to replace and what to replace it with, respectively.
 
 ---
 String Method - Replace
@@ -333,8 +359,13 @@ String Method - Translate (1/2)
 String Method - Translate (2/2)
   - Can combine table creation and translate functions:
   `mystring.translate(str.maketrans('', '', 'chars to replace'))`
-  _removes everything in 'chars to replace'_
-  - use python string library for additional utility (add these in lieu of 'chars to replace' above)
+    - _nothing to replace_
+    - _no replacement characters provided_
+    - _removes everything in 'chars to replace'_
+
+---
+### Helper: Python String Library
+  - use python string library for additional utility (can use these in lieu of 'chars to replace' example above)
     - `import string`
     - `string.whitespace` - all whitespace characters, `' \t\n\r\x0b\x0c'`
     - `string.punctuation` - all punctuation characters, `'!"#$%&\'()*+,-./:;<=>?@[\\]^_{|}~'`
