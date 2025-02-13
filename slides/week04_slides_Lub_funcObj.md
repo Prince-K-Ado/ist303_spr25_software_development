@@ -17,6 +17,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ---
 ## Assignment Discussion
+
 - Flask app part 2 (login)
 
 - Pair Exercise #2 (strings, lists, dictionaries)
@@ -31,27 +32,28 @@ Navigation issues (i.e. seeing wrong screen)
 You can also use _localhost_ in place of 127.0.0.1 above as that is always the address of the localhost.
 
 ---
-## Flask App Part 2, cont'd
-Issue with code execution: returns an error while all code is correct. 
-
-Opening the .py file in IDE shows an import issue with flask, even though flask is installed and virtual env active.
+## Windows code execution
+Problem: correct code results in errors
+Symptom: opening the .py file in IDE shows an import issue with flask, even though flask is installed and virtual env active
 
 Windows powershell - check your code execution policy:
 `Get-ExecutionPolicy`
 
-You want this to read "RemoteSigned" to be able to execute scripts. Open powershell with admin privileges (right-click, run as admin):
+**You want this to read "RemoteSigned" to be able to execute scripts.** 
+Open powershell with admin privileges (right-click, run as admin):
 `Set-ExecutionPolicy RemoteSigned`
 
 
 
 ---
 ## Play button in VS Code
+Allows you to run a file without any terminal commands
 
+Issue:
+- play button results in _"requires ipykernel and pip package..."_
 
-- 'play' button in VS Code to run python files may result in: 
-_"requires ipykernel and pip package..."_
-
-switch from 'run in interactive' to 'run in terminal'
+Solution 1: switch from 'run in interactive' to 'run in terminal'
+Solution 2: install ipykernel and VS code extension
 
 . . ._what is the difference?_
 
@@ -63,8 +65,8 @@ switch from 'run in interactive' to 'run in terminal'
 ---
 # Recap, weeks 1-3
 - navigating the terminal, commands
-
 - building a project workspace
+- connecting to remote repository
 - python data types
 - python control flow structures
 
@@ -210,16 +212,18 @@ With the tools we currently have, we'd have to simply add code to the end of our
 ---
 ### What we need: a way to have python run code located in other places. 
 
+One way to do this is to place code inside a named block of code called a function
+
 ---
 ## Functions
-**Functions** are self-contained pieces of code that are ___defined___ (how they work described in code) and ___called___ (executed). 
+**Functions** are named, self-contained blocks of code that are ___defined___ (how they work described in code) and ___called___ (executed). 
 
-functions are declared with the `def` keyword:
+functions are declared with the `def` keyword followed by indented code:
 ```
 def myfunc():
   print("your function ran")
 ```
-As with other statements, function definition statements use `:` to denote the end of the _def_ and the start of (indented) code that comprises the function
+As with other statements, function definition statements use `:` to denote the end of the _def_ statement and the start of code that comprises the function
 
 ---
 <style scoped>
