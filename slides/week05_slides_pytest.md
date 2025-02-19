@@ -116,20 +116,19 @@ Testing after development
 
 ---
 ## How many tests to write?
-no objective answer
+No objective answer
 
-General guidance:
-- write tests at different levels:
-  - write lots of small and fast unit tests
-  - write some coarse-grained tests 
-  - write a few high-level tests that test your application from end to end
+Write tests at different levels, using these general guidelines:
+  - lots of small and fast unit tests
+  - some coarse-grained tests 
+  - a few high-level tests that test your application from end to end
 
 ---
-## Testing triangle (OG)
+## Testing triangle
 ![bg 80%](rsc/test_pyramid.jpg)
 
 ---
-## Testing triangle, updated for app
+## Testing triangle, updated for app dev
 ![bg right:65% 95%](rsc/test_pyramid2.webp)
 
 ---
@@ -138,7 +137,7 @@ General guidance:
 - various types of tests
 - what a good mix of tests looks like
 
-So how do we write them?
+### So...how do we write them?
 
 ---
 ## Anatomy of a test
@@ -172,17 +171,17 @@ def volume_rect(l, w, h):
 ```
 take a few minutes and write your own function that tests volume_rect().
 
-think about various conditions you would want to test, come up with 2-3
+think about various conditions you would want to test, try to come up with at least 3
 
 ---
 ## Compare your test code with classmates
 ~5 mins
 
 ---
-
+### Test condition comparisons
 - how did they differ?
-- what can you learn about code assumptions? 
-- who is better at writing tests for your code - you or a colleague?
+- did you uncover any assumptions you may have had about the code and/or what should be tested? 
+- who would you want writing tests for code you write - you or someone else?
 
 
 
@@ -201,7 +200,7 @@ This works, but...
 - hard to maintain test code (find, edit, update)
 - lengthens and clutters your actual codebase
 
-#### Create a 'tests' directory in your project dir
+#### Helpful practice: create a 'tests' directory in your project dir
 
 ---
 ## Testing in Python
@@ -210,7 +209,7 @@ We'll be using Pytest
 
 There are a number of other frameworks (unittest is the built-in one)
 
-All have their pros and cons, feel free to explore others
+All have their pros and cons, feel free to explore others if you want to dive deeper into testing
 
 
 ---
@@ -218,7 +217,7 @@ All have their pros and cons, feel free to explore others
 **What is it?** 
 a library that helps you write and run tests. 
 
-**We just wrote some killer tests, why do we need it?**
+**What do you need it for?**
 makes writing tests easier, more organized, and efficient
 
 **Why Pytest?**
@@ -255,9 +254,9 @@ terminal > `pip list`
 ### Basic Pytest test writing
 How do you write a test in Pytest?
 
-_You write regular python code_
+- _You write regular python code_
 
-Write a test by doing the following 2 things:
+You write a test for Pytest by doing the following 2 things:
 - name your function with the **"test_"** prefix
 - use python's _assert_ keyword along with your condition: \
 `assert CONDITION`
@@ -313,7 +312,7 @@ Summary: Pytest uses plain assert statements to check the expected outcomes of t
 ## Detailed failure messaging
 We've seen how you can have custom error messages with standard python assert statements...why use pytest?
 - pytest summarizes all test results
-- pass and fail counts
+- pass and fail counts 
 - green dot for each assertion passed, red "F" for each fail
 - detailed error messages include expected and actual values for failed assertions
 
@@ -405,18 +404,20 @@ def reverse_list(list: list):
 ```
 
 ---
-## Now look at the _test_mutable.py_ file (in the scripts folder of the course github)
+## _test_mutable.py_ 
+file (in the scripts folder of the course github)
 
 ---
 ## More info on testing in Pytest
 Pair Exercise 3 - take a look at the **test_pe3.py** file
-
-You'll see examples of most of what was covered here (and it will make much more sense to you now!)
+- examples of most of what was covered here 
+- take a look at various decorator uses
+- experiment by making changes 
 
 
 ---
 ###  What about the pytest.ini file?
-Configured some options
+Used to configure some options
 
 addopts = -v --tb=short
 - -v means verbose mode, which includes information such as test names, outcomes (pass/fail), and any captured output
@@ -479,7 +480,7 @@ Avoid duplicate code by placing common functionality in a single location
 
 ---
 ## Plan the Unplanned
-- add refactoring, new tasks to the big board 
+- add any changes (refactoring, new tasks, etc.) to the big board 
 - estimate, assign, work on them
 
 **Don't count only programming time!** All work should be included in your burn-down. Remember to plan for:
@@ -496,7 +497,7 @@ Avoid duplicate code by placing common functionality in a single location
 ![bg right](rsc/over.png)
 ## When everything is complete
 - The iteration is done
-- may be some tasks not quite finished - move to next iteration
+- move tasks not quite finished to next iteration
 
 
 ---
@@ -508,24 +509,29 @@ Avoid duplicate code by placing common functionality in a single location
 ---
 # Version Control Software
 - aka Configuration Management (CM)
-- Software that keeps track of changes to files
-- enables multiple developers to work in parallel with reduced risk of undoing each others’ work
+- Software that tracks changes to files
+- enables multiple developers to work in parallel 
+- reduces risk of undoing each others’ work
 
-This is Git
+**Git** is version control software
 
-Combined with a server to store shared codebase remotely (i.e. Github)
+Combine VC with a server to store shared codebases remotely (Github)
 
 ---
 ### Conflicts
-There are times when changes are not able to be resolved by VC software
 
-In these cases you have to manually resolve the issue by either combining the changes or selecting one over the other.
+VC is good at combining multiple changes
+But sometimes it can't resolve changes
+
+In these cases you have to manually resolve the issue:
+- combine the changes, or 
+- select one change over the other
 
 ---
 <style scoped>
 {font-size: 30px;}
 </style>
-### Branching - when to branch?
+### Branching
 _A branch is a separate version of the codebase that is up to date at the time of creation, but is then worked on separately from development on the main trunk._
 
 Consider branching when:
@@ -537,10 +543,12 @@ Do not branch when:
 - the only problem is people breaking each other’s code
 
 ---
-# Upcoming assignments
+# Upcoming assignments (due 2/26)
 Flask Part 3
 - individual assignment
 - more time consuming than prior Flask assignments
-- the only assignment due next week
-- should help a great deal with your team projects
+- should be useful in your team projects
+
+Group project PART B
+- user stories->tasks, assign tasks, milestone 1.0 (due 3/12), iterations in that milestone
 
