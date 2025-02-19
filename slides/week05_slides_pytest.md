@@ -42,9 +42,8 @@ Experiences with pair programming?
 
 ---
 ## Group projects
-Full Rubric Available (all parts)
-- github
-- canvas
+Full Rubric Available (Parts A-D)
+- github, canvas, graded Part A
 
 Upcoming group deadlines:
 - Part B due Feb 26 (2 weeks)
@@ -173,18 +172,22 @@ def volume_rect(l, w, h):
 ```
 take a few minutes and write your own function that tests volume_rect().
 
-think about various conditions you would want to test.
+think about various conditions you would want to test, come up with 2-3
 
 ---
 ## Compare your test code with classmates
+~5 mins
+
+---
 
 - how did they differ?
 - what can you learn about code assumptions? 
-- do you think code and tests should be done by one individual?
+- who is better at writing tests for your code - you or a colleague?
 
 
 
 ---
+
 ![bg 50%](rsc/testpros.png)
 
 ---
@@ -216,7 +219,7 @@ All have their pros and cons, feel free to explore others
 a library that helps you write and run tests. 
 
 **We just wrote some killer tests, why do we need it?**
-makes your test writing easier, more organized, and more efficient
+makes writing tests easier, more organized, and efficient
 
 **Why Pytest?**
 Simple yet extensible, with many features
@@ -231,8 +234,8 @@ Simple yet extensible, with many features
 - detailed failure messaging
 - reusable test data/resources (fixtures)
 - run same tests easily with different data (parametrization)
-- filter tests/select tests to run (markers)
-- extendable/modifiable (many plugins to enhance functionality)
+- filter tests/select tests to run/skip (markers)
+- extendable/modifiable (additional plugins to enhance functionality)
 
 ---
 ## Pytest: what we'll cover
@@ -254,7 +257,8 @@ How do you write a test in Pytest?
 
 _You write regular python code_
 
-- name your function with the "test_" prefix
+Write a test by doing the following 2 things:
+- name your function with the **"test_"** prefix
 - use python's _assert_ keyword along with your condition: \
 `assert CONDITION`
 
@@ -269,7 +273,7 @@ def test_permafail():
   assert 2 > 300
 ```
 
-Same look as the non-pytest tests
+Regular Python code, looks the same as the non-pytest version
 
 Only difference is the "test_" convention for naming...
 ...BUT, you get a lot of extra functionality for free!
@@ -307,7 +311,7 @@ Summary: Pytest uses plain assert statements to check the expected outcomes of t
 
 ---
 ## Detailed failure messaging
-we have custom error messages with standard python assert...why use pytest?
+We've seen how you can have custom error messages with standard python assert statements...why use pytest?
 - pytest summarizes all test results
 - pass and fail counts
 - green dot for each assertion passed, red "F" for each fail
@@ -324,16 +328,16 @@ Use fixtures to create test objects, data, or state setup for use in tests
 ```
 import pytest
 @pytest.fixture
-def example_fixture():
-    return 1
+def example_fixture(): #create your test object here
+    return 1 
 
-def test_with_fixture(example_fixture):
+def test_with_fixture(example_fixture): #pass your test object as an arg
     assert example_fixture == 1
 ```
 
 ---
-### Run the same tests with different data: Parametrization
-Allows you to run the same test with different input values and a single test (instead of multiple tests)
+### Run the same test with different data: Parametrization
+Allows you to run the same test many times, with different input values, with a single test definition
 
 **Example**: We have a function _is_palindrome_ that takes a string and returns True if it is a palindrome (a word spelled the same backwards and forwards) and False otherwise. Standard python test code:
 ```
@@ -351,11 +355,12 @@ use the @pytest.mark.parametrize decorator:
                         [('tacocat',True),
                          ('taco', False),
                          ('ada', True)])
-def test_palindrome_par(test_input, expected):
+def test_palindrome_par(test_input, expected):  #use parameter names as args
   assert is_palindrome(test_input) == expected
 ```
 
-_more useful the more test conditions you have_
+- _more useful the more test conditions you have_
+- _if both are run through pytest, the non-parametrized version will yield a single result (True or False), while the parametrized version will report on each test separately_
 
 ---
 ## Filter tests/select tests to run
@@ -400,6 +405,9 @@ def reverse_list(list: list):
 ```
 
 ---
+## Now look at the _test_mutable.py_ file (in the scripts folder of the course github)
+
+---
 ## More info on testing in Pytest
 Pair Exercise 3 - take a look at the **test_pe3.py** file
 
@@ -415,6 +423,9 @@ addopts = -v --tb=short
 - --tb is traceback (error stack trace), short is concise traceback that shows only relevant lines of code and error messages without excessive details
 
 It also defined custom markers that ignored the usual warning message that goes with custom marks `@pytest.mark.CUSTOM`
+
+---
+END PYTHON SECTION 
 
 ---
 # Pilone & Miles Chapter 5: Getting it done with great design
@@ -439,7 +450,9 @@ _where have we heard this before?_
 
 ---
 ## Identifying multiple responsibilities
-“The _class_  _method’s_ itself.”
+Take a class name and one of its method names. Plug into the statement:
+
+- “The _class_  _method’s_ itself.”
 
 Good example: “The automobile _starts_ itself”
 
@@ -454,7 +467,7 @@ Make new classes for methods that don’t belong
 ---
 ## DRY (Don't Repeat Yourself)
 Avoid duplicate code by placing common functionality in a single location
-- abstraction (think get, post put for http requests)
+- abstraction (think get, post, put for http requests)
 - split/separate code 
 - each behavior in a single, sensible place
 
@@ -465,14 +478,19 @@ Avoid duplicate code by placing common functionality in a single location
 - Getting what the customer wants done when they want it is top priority
 
 ---
-### Plan the Unplanned
-- add them to the big board 
+## Plan the Unplanned
+- add refactoring, new tasks to the big board 
 - estimate, assign, work on them
 
 **Don't count only programming time!** All work should be included in your burn-down. Remember to plan for:
 - meetings with stakeholders
 - demos
 - any other miscellaneous duties
+
+---
+# Burn down charts
+
+
 
 ---
 ![bg right](rsc/over.png)
@@ -507,7 +525,7 @@ In these cases you have to manually resolve the issue by either combining the ch
 <style scoped>
 {font-size: 30px;}
 </style>
-### Branching
+### Branching - when to branch?
 _A branch is a separate version of the codebase that is up to date at the time of creation, but is then worked on separately from development on the main trunk._
 
 Consider branching when:
