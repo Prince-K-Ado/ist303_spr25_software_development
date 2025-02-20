@@ -24,14 +24,14 @@ def is_palindrome(word:str) -> bool:
 
 # unparametrized (individually writing assert statements)
 #  written this way, all tests will reduce to a single PASS/FAIL
-@pytest.mark.skip(reason="skipping palindrome")
+#@pytest.mark.skip(reason="skipping palindrome")
 def test_palindrome():
   assert is_palindrome('tacocat') == True
   assert is_palindrome('taco') == False
   assert is_palindrome('ada') == True
 
 # parametrized version - all values will be run with separate PASS/FAIL status
-@pytest.mark.skip(reason="skipping palindrome")  
+#@pytest.mark.skip(reason="skipping palindrome")  
 @pytest.mark.parametrize("test_input, expected", 
                          [('tacocat',True), 
                           ('taco', False), 
